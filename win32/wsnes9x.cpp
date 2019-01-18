@@ -4375,6 +4375,8 @@ INT_PTR CALLBACK DlgSoundConf(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam)
             SendDlgItemMessage(hDlg, IDC_DRIVER, CB_SETITEMDATA, pos, WIN_SNES9X_DIRECT_SOUND_DRIVER);
             pos = SendDlgItemMessage(hDlg, IDC_DRIVER, CB_INSERTSTRING, -1, (LPARAM)TEXT("XAudio2"));
             SendDlgItemMessage(hDlg, IDC_DRIVER, CB_SETITEMDATA, pos, WIN_XAUDIO2_SOUND_DRIVER);
+			pos = SendDlgItemMessage(hDlg, IDC_DRIVER, CB_INSERTSTRING, -1, (LPARAM)TEXT("Nostalgia Headphones"));
+			SendDlgItemMessage(hDlg, IDC_DRIVER, CB_SETITEMDATA, pos, WIN_NOSTALGIA_HEADPHONES_SOUND_DRIVER);
     #ifdef FMOD_SUPPORT
             pos = SendDlgItemMessage(hDlg, IDC_DRIVER, CB_INSERTSTRING, -1, (LPARAM)TEXT("FMOD DirectSound"));
             SendDlgItemMessage(hDlg, IDC_DRIVER, CB_SETITEMDATA, pos, WIN_FMOD_DIRECT_SOUND_DRIVER);
@@ -4629,6 +4631,9 @@ INT_PTR CALLBACK DlgSoundConf(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam)
 							case WIN_XAUDIO2_SOUND_DRIVER:
 								SendDlgItemMessage(hDlg,IDC_BUFLEN,CB_SETCURSEL,3,0);
 								EnableWindow(GetDlgItem(hDlg, IDC_DYNRATECONTROL), TRUE);
+								break;
+							case WIN_NOSTALGIA_HEADPHONES_SOUND_DRIVER:
+								SendDlgItemMessage(hDlg, IDC_BUFLEN, CB_SETCURSEL, 3, 0);
 								break;
 							default:
 								SendDlgItemMessage(hDlg,IDC_BUFLEN,CB_SETCURSEL,7,0);

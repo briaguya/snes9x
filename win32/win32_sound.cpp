@@ -10,6 +10,7 @@
 #include "wsnes9x.h"
 #include "CDirectSound.h"
 #include "CXAudio2.h"
+#include "NostalgiaHeadphones.h"
 #include "win32_sound.h"
 #include "win32_display.h"
 
@@ -18,6 +19,7 @@
 // available sound output methods
 CDirectSound S9xDirectSound;
 CXAudio2 S9xXAudio2;
+NostalgiaHeadphones S9xNostalgiaHeadphones;
 
 // Interface used to access the sound output
 IS9xSoundOutput *S9xSoundOutput = &S9xXAudio2;
@@ -76,6 +78,10 @@ bool8 S9xOpenSoundDevice ()
 			break;
 		case WIN_XAUDIO2_SOUND_DRIVER:
 			S9xSoundOutput = &S9xXAudio2;
+			break;
+		case WIN_NOSTALGIA_HEADPHONES_SOUND_DRIVER:
+			S9xSoundOutput = &S9xNostalgiaHeadphones;
+			Settings.DynamicRateControl = true;
 			break;
 		default:	// we default to DirectSound
 			GUI.SoundDriver = WIN_SNES9X_DIRECT_SOUND_DRIVER;

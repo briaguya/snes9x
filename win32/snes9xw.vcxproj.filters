@@ -270,6 +270,9 @@
     <ClInclude Include="image_functions.h">
       <Filter>GUI\VideoDriver</Filter>
     </ClInclude>
+    <ClInclude Include="NostalgiaHeadphones.h">
+      <Filter>GUI\SoundDriver</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\bsx.cpp">
@@ -583,6 +586,9 @@
     </ClCompile>
     <ClCompile Include="image_functions.cpp">
       <Filter>GUI\VideoDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="NostalgiaHeadphones.cpp">
+      <Filter>GUI\SoundDriver</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

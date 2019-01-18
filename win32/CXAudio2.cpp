@@ -260,6 +260,7 @@ void CXAudio2::SetVolume(double volume)
 void CXAudio2::BeginPlayback()
 {
 	pSourceVoice->Start(0);
+	pSourceVoice->Start(0);
 }
 
 void CXAudio2::StopPlayback()

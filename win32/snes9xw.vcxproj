@@ -439,6 +439,7 @@
     <ClInclude Include="InputCustom.h" />
     <ClInclude Include="IS9xDisplayOutput.h" />
     <ClInclude Include="IS9xSoundOutput.h" />
+    <ClInclude Include="NostalgiaHeadphones.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="rsrc\resource.h" />
     <ClInclude Include="snes_ntsc.h" />
@@ -575,6 +576,7 @@
     <ClCompile Include="gl_core_3_1.c" />
     <ClCompile Include="image_functions.cpp" />
     <ClCompile Include="InputCustom.cpp" />
+    <ClCompile Include="NostalgiaHeadphones.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="snes_ntsc.c" />
     <ClCompile Include="wconfig.cpp" />
